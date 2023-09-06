@@ -32,8 +32,11 @@ class CustomCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
           children: [
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Icon(
@@ -46,25 +49,41 @@ class CustomCard extends StatelessWidget {
                 Text(
                   'Premium Debits',
                 ),
-              ],
-            ),
-            Row(
-              children: [
                 SizedBox(
-                  width: 30,
+                  width: 135,
                 ),
                 Image.asset(
-                  'assets/account_assets/chip.png',
-                  width: 55,
-                  height: 55,
-                ),
+                  'assets/account_assets/absa.png',
+                  height: 80,
+                  width: 80,
+                )
               ],
             ),
             Text(
               '4001 1432 5688 1997',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30, fontFamily: 'OCRB'),
-            )
+              style: TextStyle(
+                  color: Colors.grey.shade300,
+                  fontSize: 30,
+                  fontFamily: 'OCRB'),
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  'assets/account_assets/chip.png',
+                  width: 55,
+                  height: 55,
+                ),
+                SizedBox(
+                  width: 205,
+                ),
+                Image.asset(
+                  'assets/account_assets/visa.png',
+                  height: 50,
+                  width: 80,
+                )
+              ],
+            ),
           ],
         ),
       ),
