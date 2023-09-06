@@ -43,15 +43,3 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-
-# Ignore everything
-*
-
-# Include the assets folder
-!/assets/
-
-# Include the fonts folder
-!/fonts/
-
-# Include the lib folder
-!/lib/
