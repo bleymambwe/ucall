@@ -8,16 +8,13 @@ class DiscoverScreen extends StatelessWidget {
     return Container(
       //color: Color(0x90FFDB58),
       child: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              CustomSearchBar(),
-              Expanded(
-                child: CustomListBar(), // Wrap CustomTabBar with Expanded
-              ),
-            ],
-          ),
+        child: Column(
+          children: [
+            CustomSearchBar(),
+            Expanded(
+              child: CustomListBar(), // Wrap CustomTabBar with Expanded
+            ),
+          ],
         ),
       ),
     );
@@ -41,8 +38,8 @@ class CustomListBar extends StatelessWidget {
               // color: Colors.amber.withOpacity(0.1),
               borderRadius: BorderRadius.circular(8),
             ),
-            height: 300, // Adjust the width of each item
-            // Replace with your desired item content
+            height: 300,
+            width: double.infinity,
             child: Stack(
               alignment: Alignment.center,
               children: [

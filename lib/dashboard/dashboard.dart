@@ -6,6 +6,7 @@ import 'custom_appbar.dart';
 import 'discover_page.dart';
 import 'account_page.dart';
 import 'jobs_page.dart';
+import 'profile_page.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({Key? key});
@@ -21,6 +22,7 @@ class _DashboardState extends State<Dashboard> {
     DiscoverScreen(),
     JobsScreen(),
     AccountScreen(),
+    Profile(),
   ];
 
   @override
@@ -58,8 +60,13 @@ class _DashboardState extends State<Dashboard> {
               textStyle: TextStyle(fontSize: 15),
             ),
             GButton(
-              icon: LineIcons.user,
+              icon: Icons.comment_bank,
               text: 'Account',
+              textStyle: TextStyle(fontSize: 15),
+            ),
+            GButton(
+              icon: LineIcons.user,
+              text: 'Profile',
               textStyle: TextStyle(fontSize: 15),
             ),
           ],

@@ -27,19 +27,25 @@ class CustomAppBar extends StatelessWidget {
             Text(
               'Sam Lungu',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 30, color: Colors.white),
+              style: TextStyle(
+                fontSize: 30,
+                // color: Colors.white
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Icon(
                   Icons.location_pin,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
                 Text(
                   'Lusaka, Zambia',
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 15, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 15,
+                    //color: Colors.white
+                  ),
                 ),
               ],
             )
