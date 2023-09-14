@@ -71,6 +71,8 @@ flutter:
     - assets/email_assets/
     - assets/dashboard_assets/
     - assets/account_assets/
+    - assets/service_categories/
+    - assets/cleaners/
     
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

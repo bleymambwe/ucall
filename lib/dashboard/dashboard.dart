@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
+import 'package:ucall/theme.dart';
 import 'custom_appbar.dart';
-import 'discover_page.dart';
+import 'home_page.dart';
 import 'account_page.dart';
-import 'jobs_page.dart';
+import 'bookings_page/booking_page.dart';
 import 'profile_page.dart';
 
 class Dashboard extends StatefulWidget {
@@ -19,8 +20,8 @@ class _DashboardState extends State<Dashboard> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    DiscoverScreen(),
-    JobsScreen(),
+    HomeScreen(),
+    BookingsScreen(),
     AccountScreen(),
     Profile(),
   ];
@@ -30,7 +31,7 @@ class _DashboardState extends State<Dashboard> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primaryColor: const Color(0x90FFDB58),
+        primaryColor: Color(primColor),
         fontFamily: 'Josefin_Sans',
       ),
       home: Scaffold(
@@ -46,27 +47,28 @@ class _DashboardState extends State<Dashboard> {
               _selectedIndex = index;
             });
           },
+
           selectedIndex:
               _selectedIndex, // Uncomment this line to set the initial selected tab.
           tabs: const [
             GButton(
               icon: LineIcons.home,
-              text: 'Discover',
+              text: 'Home',
               textStyle: TextStyle(fontSize: 15),
             ),
             GButton(
-              icon: LineIcons.search,
-              text: 'Jobs',
-              textStyle: TextStyle(fontSize: 15),
-            ),
-            GButton(
-              icon: Icons.comment_bank,
-              text: 'Account',
+              icon: LineIcons.book,
+              text: 'Bookings',
               textStyle: TextStyle(fontSize: 15),
             ),
             GButton(
               icon: LineIcons.user,
-              text: 'Profile',
+              text: 'Account',
+              textStyle: TextStyle(fontSize: 15),
+            ),
+            GButton(
+              icon: LineIcons.tools,
+              text: 'Settings',
               textStyle: TextStyle(fontSize: 15),
             ),
           ],
@@ -80,7 +82,7 @@ class _DashboardState extends State<Dashboard> {
                 const SizedBox(
                   height: 55,
                 ),
-                const CustomAppBar(),
+                // const CustomAppBar(),
                 Expanded(child: _screens[_selectedIndex]),
               ],
             ),

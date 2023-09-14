@@ -41,6 +41,17 @@ class Profile extends StatelessWidget {
               );
             },
           ),
+          ListTile(
+            leading: Icon(Icons.location_city),
+            title: Text('City'),
+            trailing: Icon(Icons.arrow_forward_ios),
+            onTap: () {
+              // Navigate to the City screen
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => CityScreen()),
+              );
+            },
+          ),
           Divider(),
           ListTile(
             leading: Icon(Icons.privacy_tip),
@@ -50,6 +61,18 @@ class Profile extends StatelessWidget {
               // Navigate to the Privacy Policy screen
               Navigator.of(context).push(
                 MaterialPageRoute(builder: (context) => PrivacyPolicyScreen()),
+              );
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.location_city),
+            title: Text('Contact Us'),
+            trailing: Icon(Icons.phone),
+            onTap: () {
+              // Navigate to the City screen
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => CityScreen()),
               );
             },
           ),

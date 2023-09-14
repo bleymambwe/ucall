@@ -8,10 +8,10 @@ import 'onBoarding/onboarding_comp.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => CounterModel(),
-      child: Home(),
-    ),
+    MultiProvider(providers: [
+      ChangeNotifierProvider(create: (context) => CounterModel()),
+      // ChangeNotifierProvider(create: (context) => ThemeProvider()),
+    ], child: Home()),
   );
 }
 
